@@ -13,28 +13,43 @@ document.getElementById('change-table').style.visibility = 'hidden';
 
 
 nextButton.addEventListener("click",function displayFurther(){
-    document.getElementById('cashg').style.visibility = 'visible';
-    document.getElementById('cash-give').style.visibility = 'visible';
-    document.getElementById('check-button').style.visibility = 'visible';
+    if(isNumeric(billAmount.value)){
+        document.getElementById('cashg').style.visibility = 'visible';
+        document.getElementById('cash-give').style.visibility = 'visible';
+        document.getElementById('check-button').style.visibility = 'visible';
+    }
+    else{
+        showMessage("Don't fun ..plzz enter numeric value");
+    }
+    
+    
 });
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 
 checkbutton.addEventListener("click" ,function validateBillAndCashAmount(){
     hideMessage();
-    if(billAmount.value > 0){
-        if(cashGiven.value >= billAmount.value)
-        {   
-            const amountToBeReturned = cashGiven.value - billAmount.value;
-            calculateChange(amountToBeReturned);
-            document.getElementById('change-table').style.visibility = 'visible';
-
-            
-        }else{
-            showMessage("Do you wanna wash plates?");
+   
+        if(billAmount.value > 0)
+        {
+            if(cashGiven.value >= billAmount.value)
+            {   
+                const amountToBeReturned = cashGiven.value - billAmount.value;
+                calculateChange(amountToBeReturned);
+                document.getElementById('change-table').style.visibility = 'visible';
+            }
+            else{
+                showMessage("Do you wanna wash plates?");
+            }
         }
-    }else{
-        showMessage("Invalid Bill Amount");
-       }
+      
+   
 });
+
+
 
 function hideMessage(){
     message.style.display ="none";
