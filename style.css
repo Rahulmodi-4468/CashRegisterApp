@@ -60,13 +60,19 @@ caption{
     font-weight: bold;
 }
 @media only screen and (max-width:640px){
+    .description{
+        border-style: dotted;
+        border-color: #3ae0a9;
+    }
+    label{
+        margin-top: 0.5rem;
+    }
     .container{
         width: 90%;
         margin-top: 0rem;
-    }
-  
-   
+    } 
     body{
         background-color: aquamarine;
-    }    
+    }
+
 }

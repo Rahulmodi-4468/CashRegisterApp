@@ -19,9 +19,8 @@ nextButton.addEventListener("click",function displayFurther(){
         document.getElementById('check-button').style.visibility = 'visible';
     }
     else{
-        showMessage("Don't fun ..plzz enter numeric value");
+        showMessage("Don't test us ..plzz enter numeric value");
     }
-    
     
 });
 
