@@ -16,6 +16,18 @@ body{
     border-radius: 0.4rem;
     margin-top: 1rem;
 }
+.description{
+    border-style: dotted;
+    border-color: #0cb67d;
+    padding: 0.5rem;
+}
+#error-message1 , #error-message2{
+    font-size: large;
+    font-weight: bold;
+}
+img{
+    margin: auto;
+}
 label{
     font-weight: bold;
     font-size: large;
@@ -60,10 +72,6 @@ caption{
     font-weight: bold;
 }
 @media only screen and (max-width:640px){
-    .description{
-        border-style: dotted;
-        border-color: #3ae0a9;
-    }
     label{
         margin-top: 0.5rem;
     }
