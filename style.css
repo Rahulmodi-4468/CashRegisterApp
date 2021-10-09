@@ -55,19 +55,21 @@ button:hover{
 }
 
 .change-table {
+    margin: auto;
     background: #edf2fb;
     border: 1px solid #333;
     border-collapse: collapse;
     border-radius: 0.3rem;
+    padding: 0.5rem;
 }
 th,td{
     text-align: center;
-    padding: 0.3rem;
     border: 1px solid #333;
+    padding: 0.1rem;
     
 }
 caption{
-    margin-top: 1rem ;
+    margin:0rem 1rem ;
     font-size: large;
     font-weight: bold;
 }
